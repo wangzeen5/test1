@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FHIR ServiceRequest - Exercise Prescription</title>
+</head>
+<body>
+    <pre>
+{
+    "resourceType": "ServiceRequest",
+    "id": "exercise-prescription-001",
+    "status": "active",
+    "intent": "order",
+    "code": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "229065009",
+                "display": "Exercise therapy"
+            }
+        ],
+        "text": "Personalized exercise prescription"
+    },
+    "subject": {
+        "reference": "Patient/123"
+    },
+    "authoredOn": "2024-11-26",
+    "requester": {
+        "reference": "Practitioner/456",
+        "display": "Dr. Wang"
+    },
+    "reasonCode": [
+        {
+            "text": "Improve cardiovascular health"
+        }
+    ],
+    "note": [
+        {
+            "text": "30 minutes of moderate-intensity cardio, 5 times a week. Include strength training twice a week."
+        }
+    ]
+}
+    </pre>
+</body>
+</html>
